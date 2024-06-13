@@ -69,21 +69,10 @@ export default function Home() {
   let count = useRef(0)
 
   return (
-    <main className="flex min-h-screen max-h-screen flex-col items-center">
-      <Error statusCode={404} />
-      <div className="flex flex-row">
-        {visible && (
-          <>
-            <div className="fixed inset-0 z-10 bg-white"></div>
-            <div
-              className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-20 outline-none focus:outline-none"
-            >
-              <LoginModal />
-            </div>
-          </>
-        )}
+    <main className="s">
+      <div className="ss">
+        {<LoginModal />}
       </div>
-      {/* <LoginModal /> */}
       <HiddenButton handleClick={() => setVisible(true)} />
     </main >
   );
