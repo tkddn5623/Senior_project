@@ -1,15 +1,15 @@
 import { NextResponse } from 'next/server'
 
-export function middleware(request) {
+export function middleware(request: NextResponse) {
     const currentUser = request.cookies.get('1536id')?.value
+    return NextResponse.next()
+    // if (currentUser) {
+    //     return Response.redirect(new URL('/dashboard', request.url))
+    // }
 
-    if (currentUser) {
-        return Response.redirect(new URL('/dashboard', request.url))
-    }
-
-    if (!currentUser) {
-        return Response.redirect(new URL('/login', request.url))
-    }
+    // if (!currentUser) {
+    //     return Response.redirect(new URL('/login', request.url))
+    // }
 }
 
 
